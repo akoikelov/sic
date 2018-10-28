@@ -1,4 +1,4 @@
-from django.db.models import Model, DateTimeField
+from django.db.models import Model, DateTimeField, TextField
 from django.utils.text import slugify
 from unidecode import unidecode
 
@@ -28,3 +28,8 @@ class ModelWithSlugMixin(AbstractModel):
     def save(self, *args, **kwargs):
         self.slug = slugify(unidecode(getattr(self, self.slugifying_field_name)))
         super(ModelWithSlugMixin, self).save(*args, **kwargs)
+
+
+class StaticInfo(AbstractModel):
+
+    info = TextField(null=False)
