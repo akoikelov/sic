@@ -33,3 +33,5 @@ SECRET_KEY = "secret_key_for_testing"
 DROPBOX_ACCESS_TOKEN = DROPBOX_ACCESS_TOKEN_VALUE
 MEDIA_ROOT = 'media'
 TIME_ZONE = 'Asia/Bishkek'
+
+ROOT_URLCONF = 'test_app.urls'

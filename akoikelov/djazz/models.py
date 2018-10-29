@@ -36,21 +36,3 @@ class ModelWithSlugMixin(AbstractModel):
 class StaticInfo(AbstractModel):
 
     info = TextField(null=False)
-
-    def __setattr__(self, key, value):
-        if key == 'info':
-            self.info = json.dumps(value)
-        else:
-            super(StaticInfo, self).__setattr__(key, value)
-
-    def __getattr__(self, item):
-        if item == 'info':
-            if self.info:
-                try:
-                    return json.loads(self.info)
-                except JSONDecodeError:
-                    pass
-
-            return {}
-        else:
-            return super(StaticInfo, self).__getattr__(item)

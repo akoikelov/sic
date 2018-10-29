@@ -1,8 +1,15 @@
 from rest_framework.fields import CharField
-from rest_framework.serializers import Serializer
+from rest_framework.serializers import ModelSerializer
+
+from akoikelov.djazz.models import StaticInfo
 
 
-class StaticInfoSerializer(Serializer):
+class StaticInfoSerializer(ModelSerializer):
 
-    field_name = CharField(required=True)
-    value = CharField(required=True)
+    field_name = CharField()
+    value = CharField()
+    info = CharField(read_only=True)
+
+    class Meta:
+        model = StaticInfo
+        exclude = ()
