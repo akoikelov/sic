@@ -4,3 +4,4 @@ dropbox
 unidecode
 psycopg2
 Faker
+djangorestframework
