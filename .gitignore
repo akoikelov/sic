@@ -68,3 +68,4 @@ params.py
 /media
 /*.zip
 /*.sqlite3
+/static

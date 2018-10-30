@@ -19,6 +19,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.staticfiles',
     'akoikelov.djazz',
     'test_app'
 )
@@ -37,3 +38,5 @@ MEDIA_ROOT = 'media'
 TIME_ZONE = 'Asia/Bishkek'
 
 ROOT_URLCONF = 'test_app.urls'
+STATIC_URL = '/static'
+STATIC_ROOT = 'static'
