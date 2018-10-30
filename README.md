@@ -8,7 +8,7 @@ or
 
 #### How to use it
 
-1. Add `akoikelov.djazz` to INSTALLED_APPS in settings.py:
+Add `akoikelov.djazz` to INSTALLED_APPS in settings.py:
 `INSTALLED_APPS = [
     ...
     'tastypie',
