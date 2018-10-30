@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 from params import DROPBOX_ACCESS_TOKEN_VALUE, DATABASES_SETTING
 
+DEBUG = True
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
