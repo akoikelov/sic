@@ -84,5 +84,5 @@ ROOT_URLCONF = 'test_app.urls'
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 
-
+SI_INCLUDE_JQUERY = True
 
