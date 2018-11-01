@@ -1,0 +1,7 @@
+{% load staticfiles %}
+
+<script>
+    var isAdmin = {% if user and user.is_superuser %}true{% else %}false{% endif %};
+    var endpointUrl = '{% url "si_update" %}';
+</script>
+<script src="{% static "djazz/js/staitc_info.js" %}"></script>
