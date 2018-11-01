@@ -1,4 +1,5 @@
 import json
+from json import JSONDecodeError
 
 from django import template
 from django.conf import settings
@@ -19,7 +20,10 @@ def sic_get(context, key, default='Default'):
     if 'sic_data' not in context or context['sic_data'] is None:
         return default
 
-    data = json.loads(context['sic_data'].info)
+    try:
+        data = json.loads(context['sic_data'].info)
+    except JSONDecodeError:
+        return default
 
     if key not in data:
         return default
