@@ -7,9 +7,9 @@
     <title>Static Info constructor test page</title>
 </head>
 <body>
-    <p sic-enabled>
+    <p sic="phone">
         Some information to be changed
-        {{ sic_data }}
+        {% sic_get 'phone' %}
     </p>
 
     {% include_si %}

@@ -1,3 +1,5 @@
+import json
+
 from django import template
 from django.conf import settings
 
@@ -10,3 +12,16 @@ def include_si(context):
         context['include_jquery'] = True
 
     return context
+
+
+@register.simple_tag(takes_context=True)
+def sic_get(context, key, default='Default'):
+    if 'sic_data' not in context or context['sic_data'] is None:
+        return default
+
+    data = json.loads(context['sic_data'].info)
+
+    if key not in data:
+        return default
+
+    return data[key]
