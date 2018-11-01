@@ -38,5 +38,5 @@ MEDIA_ROOT = 'media'
 TIME_ZONE = 'Asia/Bishkek'
 
 ROOT_URLCONF = 'test_app.urls'
-STATIC_URL = '/static'
+STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
