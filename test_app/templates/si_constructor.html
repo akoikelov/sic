@@ -7,11 +7,20 @@
     <title>Static Info constructor test page</title>
 </head>
 <body>
-    <p sic="phone">
-        Some information to be changed
+<p>
+    <span sic="phone">
+        phone:
         {% sic_get 'phone' %}
-    </p>
+    </span>
+</p>
+<p>
+    <span sic="address">
+        address:
+        {% sic_get 'address' %}
+    </span>
+</p>
 
-    {% include_si %}
+
+{% include_si %}
 </body>
 </html>
