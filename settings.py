@@ -86,3 +86,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 
 SIC_INCLUDE_JQUERY = True
+SIC_SAVE_BTN_LABEL = 'Update'
+SIC_TEXTAREA_PLACEHOLDER = 'New content'
