@@ -8,6 +8,8 @@ from akoikelov.djazz.serializers import StaticInfoSerializer
 
 class UpdateStaticInfoView(UpdateAPIView):
     serializer_class = StaticInfoSerializer
+    permission_classes = ()
+    authentication_classes = ()
 
     def perform_update(self, serializer):
         data = serializer.validated_data

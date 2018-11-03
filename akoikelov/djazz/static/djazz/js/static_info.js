@@ -11,12 +11,32 @@ $(document).ready(function () {
             });
 
             modal.addFooterBtn(saveBtnLbl, 'tingle-btn tingle-btn--default', function () {
+                var form = $('form.sicUpdateForm', $(this).parent().parent());
+                var model = $(obj).attr('sic');
+                var value = $('textarea', form).val();
 
+                $.ajax({
+                    method: $(form).attr('method'),
+                    url: $(form).attr('action'),
+                    data: {
+                        field_name: model,
+                        value: value
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        $(obj).text(data.value);
+                        modal.close();
+                    },
+                    error: function () {
+
+                    }
+                })
             });
 
             var modalContent = '<form method="post" class="sicUpdateForm" action="{action}">' +
-                '<textarea class="sic-textarea" rows="8" placeholder="{ph}">{val}</textarea></form>'
-                                .replace('{action}', endpointUrl).replace('{ph}', textareaPlaceholder)
+                '<textarea class="sic-textarea" rows="8" placeholder="{ph}">{val}</textarea></form>';
+
+            modalContent = modalContent.replace('{action}', endpointUrl).replace('{ph}', textareaPlaceholder)
                                 .replace('{val}', currentValue);
 
             modal.setContent(modalContent);
