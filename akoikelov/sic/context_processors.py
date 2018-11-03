@@ -8,12 +8,12 @@ def sic(request):
     info = StaticInfo.objects.first()
 
     if info is None:
-        return None
+        return {}
 
     try:
         data = json.loads(info.info)
     except JSONDecodeError:
-        return None
+        return {}
 
     return {
         'sic_data': data
