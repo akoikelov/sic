@@ -64,6 +64,8 @@ Configuration:
         },
 ]
 ```
+3. Run `manage.py migrate` command
+
 
 In template:
 
