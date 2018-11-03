@@ -4,12 +4,14 @@
     <link href="{% static "djazz/css/static_info.css" %}" rel="stylesheet" type="text/css"/>
     <link href="{% static "djazz/css/tingle.min.css" %}" rel="stylesheet" type="text/css"/>
 
-    {% if include_jquery %}
+    {% if sic_include_jquery %}
         <script src="{% static "djazz/js/jquery-3.3.1.min.js" %}"></script>
     {% endif %}
 
     <script>
         var endpointUrl = '{% url "si_update" %}';
+        var saveBtnLbl = '{{ sic_save_btn_lbl }}';
+        var textareaPlaceholder = '{{ sic_textarea_placeholder }}';
     </script>
     <script src="{% static "djazz/js/tingle.min.js" %}"></script>
     <script src="{% static "djazz/js/static_info.js" %}"></script>

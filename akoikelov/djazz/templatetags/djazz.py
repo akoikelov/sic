@@ -1,6 +1,3 @@
-import json
-from json import JSONDecodeError
-
 from django import template
 from django.conf import settings
 
@@ -9,8 +6,10 @@ register = template.Library()
 
 @register.inclusion_tag('static_info/constructor.html', takes_context=True)
 def include_si(context):
-    if getattr(settings, 'SI_INCLUDE_JQUERY', False):
-        context['include_jquery'] = True
+    if getattr(settings, 'SIC_INCLUDE_JQUERY', False):
+        context['sic_include_jquery'] = True
+    context['sic_save_btn_lbl'] = getattr(settings, 'SIC_SAVE_BTN_LABEL', 'Save')
+    context['sic_textarea_placeholder'] = getattr(settings, 'SIC_TEXTAREA_PLACEHOLDER', 'Put your new content')
 
     return context
 

@@ -3,3 +3,12 @@
     border: 2px darkblue dotted;
     cursor: pointer;
 }
+
+.sic-modal > div {
+    width: 500px;
+}
+
+.sic-textarea {
+    width: 100%;
+    resize: none;
+}
