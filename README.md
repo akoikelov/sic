@@ -86,7 +86,7 @@ phone:
 </span>
 
 <script src="jquery_link"></script>
-{% include_si ^}
+{% include_si %}
 ```
 
 There are `SIC_SAVE_BTN_LABEL`, `SIC_TEXTAREA_PLACEHOLDER` attributes which can be set in settings.py
