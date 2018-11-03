@@ -88,3 +88,5 @@ phone:
 ```
 
 There are `SIC_SAVE_BTN_LABEL`, `SIC_TEXTAREA_PLACEHOLDER` attributes which can be set in settings.py
+
+![alt text](screencast/sic.gif)
