@@ -24,7 +24,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'akoikelov.djazz',
+    'akoikelov.sic',
     'test_app'
 )
 
@@ -39,7 +39,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'akoikelov.djazz.context_processors.sic'
+                'akoikelov.sic.context_processors.sic'
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',

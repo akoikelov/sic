@@ -3,7 +3,7 @@ import json
 from django.test import TestCase
 from django.urls import reverse
 
-from akoikelov.djazz.models import StaticInfo
+from akoikelov.sic.models import StaticInfo
 
 
 class TestUpdateStaticInfoView(TestCase):

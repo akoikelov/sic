@@ -1,7 +1,7 @@
 import json
 from json import JSONDecodeError
 
-from akoikelov.djazz.models import StaticInfo
+from akoikelov.sic.models import StaticInfo
 
 
 def sic(request):

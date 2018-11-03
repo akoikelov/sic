@@ -1,7 +1,7 @@
 from rest_framework.fields import CharField
 from rest_framework.serializers import ModelSerializer
 
-from akoikelov.djazz.models import StaticInfo
+from akoikelov.sic.models import StaticInfo
 
 
 class StaticInfoSerializer(ModelSerializer):

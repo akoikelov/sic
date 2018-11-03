@@ -2,8 +2,8 @@ import json
 
 from rest_framework.generics import UpdateAPIView
 
-from akoikelov.djazz.models import StaticInfo
-from akoikelov.djazz.serializers import StaticInfoSerializer
+from akoikelov.sic.models import StaticInfo
+from akoikelov.sic.serializers import StaticInfoSerializer
 
 
 class UpdateStaticInfoView(UpdateAPIView):

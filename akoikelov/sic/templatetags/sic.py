@@ -16,9 +16,12 @@ def include_si(context):
 
 @register.simple_tag(takes_context=True)
 def sic_get(context, key, default='Default'):
+    if 'sic_data' not in context:
+        return default
+
     data = context['sic_data']
 
-    if data is None or key not in data:
+    if key not in data:
         return default
 
     return data[key]

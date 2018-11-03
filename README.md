@@ -1,54 +1,31 @@
-# djazz
-Djazz is helper library for Django framework
+# sic
+Django Static Info constructor
 
 ## Installation
-1. via pip: `pip install git+https://github.com/akoikelov/djazz`
+1. via pip: `pip install git+https://github.com/akoikelov/sic`
 or
-2. download repository: https://github.com/akoikelov/djazz and run script `./install.sh`
+2. download repository: https://github.com/akoikelov/sic and run script `./install.sh`
 
 ## Configuration
 
-Add `akoikelov.djazz` to INSTALLED_APPS in settings.py:
+Add `akoikelov.sic` to INSTALLED_APPS in settings.py:
 ```python
 INSTALLED_APPS = [
     'tastypie',
-    'akoikelov.djazz'
+    'akoikelov.sic'
 ]
 ```
 
-### Code generators
-
-There are several commands inside:
-- `python manage.py gen_model [app_name] [model_name]`
-- `python manage.py gen_admin [app_name]`
-
-### Backup tool
-
-For backup of database and media files, there is a command:
-
-- `python manage.py backup [-s] [-m] [-r]`
-- `python manage.py backup [-l]`
-
-* -s: option for saving backup
-* -l: option for loading latest backup
-* -m: also backup media files
-* -r: Delete old backups and replace them with a new backup
-
-We store backups at Dropbox.
-Add `DROPBOX_ACCESS_TOKEN` param to settings.py, containing dropbox access token
-
-### Static Info constructor
-
 Configuration:
 
-1. Add `url(r'^', include('akoikelov.djazz.urls'))` to urls.py
+1. Add `url(r'^', include('akoikelov.sic.urls'))` to urls.py
 ```python
     urlpatterns = patterns(
-        url(r'^', include('akoikelov.djazz.urls')), # djazz urls
+        url(r'^', include('akoikelov.sic.urls')), # sic urls
         url(r'^admin/', include(admin.site.urls)),
 )
 ```
-2. Add `akoikelov.djazz.context_processors.sic` to context_processors
+2. Add `akoikelov.sic.context_processors.sic` to context_processors
 ```python
     TEMPLATES = [
         {
@@ -58,7 +35,7 @@ Configuration:
             'OPTIONS': {
                 'context_processors': [
                     ...,
-                    'akoikelov.djazz.context_processors.sic' # context processor
+                    'akoikelov.sic.context_processors.sic' # context processor
                 ]
             },
         },
@@ -69,7 +46,7 @@ Configuration:
 
 In template:
 
-- Load `djazz` at the top of your template
+- Load `sic` at the top of your template
 - Use `{% include_si %}` tag at the end of your template (it should be placed after jquery library script tag)
 - If you don't have jquery, set `SIC_INCLUDE_JQUERY = True` in settings.py
 - Every element with static content should have `sic` attribute with the key value
@@ -78,7 +55,7 @@ In template:
 - To edit an information of the element, just click on it and an modal window will be popped up
 
 ```djangotemplate
-{% load "djazz" %}
+{% load "sic" %}
 
 phone: 
 <span sic="phone">
