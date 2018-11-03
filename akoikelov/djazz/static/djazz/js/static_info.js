@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    if (isAdmin) {
-        $('*[sic]').addClass('sic-editing-field');
-    }
+    $('*[sic]').addClass('sic-editing-field').on('click', function () {
+    });
 });

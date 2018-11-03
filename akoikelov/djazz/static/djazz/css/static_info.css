@@ -1,4 +1,5 @@
 
 .sic-editing-field {
     border: 2px darkblue dotted;
+    cursor: pointer;
 }
