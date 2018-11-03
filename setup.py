@@ -43,16 +43,16 @@ for dirpath, dirnames, filenames in os.walk(extensions_dir):
 
 
 setup(
-    name='akoikelov.djazz',
-    version='0.0.8',
+    name='akoikelov.sic',
+    version='0.0.1',
     packages=packages,
     package_data=package_data,
     include_package_data=True,
-    install_requires=['django', 'setuptools', 'dropbox', 'unidecode', 'psycopg2', 'Faker',
+    install_requires=['django', 'setuptools', 'unidecode', 'psycopg2',
                       'djangorestframework'],
-    url='https://github.com/akoikelov/djazz',
+    url='https://github.com/akoikelov/sic',
     license='',
     author='akoikelov',
     author_email='kolyakoikelov@gmail.com',
-    description='Djazz is helper library for Django framework',
+    description='Django Static Info constructor',
 )
