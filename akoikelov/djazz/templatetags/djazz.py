@@ -17,15 +17,9 @@ def include_si(context):
 
 @register.simple_tag(takes_context=True)
 def sic_get(context, key, default='Default'):
-    if 'sic_data' not in context or context['sic_data'] is None:
-        return default
+    data = context['sic_data']
 
-    try:
-        data = json.loads(context['sic_data'].info)
-    except JSONDecodeError:
-        return default
-
-    if key not in data:
+    if data is None or key not in data:
         return default
 
     return data[key]
