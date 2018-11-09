@@ -1,11 +1,11 @@
 {% load staticfiles %}
 
 {% if user and user.is_superuser %}
-    <link href="{% static "djazz/css/static_info.css" %}" rel="stylesheet" type="text/css"/>
-    <link href="{% static "djazz/css/tingle.min.css" %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static "sic/css/static_info.css" %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static "sic/css/tingle.min.css" %}" rel="stylesheet" type="text/css"/>
 
     {% if sic_include_jquery %}
-        <script src="{% static "djazz/js/jquery-3.3.1.min.js" %}"></script>
+        <script src="{% static "sic/js/jquery-3.3.1.min.js" %}"></script>
     {% endif %}
 
     <script>
@@ -13,6 +13,6 @@
         var saveBtnLbl = '{{ sic_save_btn_lbl }}';
         var textareaPlaceholder = '{{ sic_textarea_placeholder }}';
     </script>
-    <script src="{% static "djazz/js/tingle.min.js" %}"></script>
-    <script src="{% static "djazz/js/static_info.js" %}"></script>
+    <script src="{% static "sic/js/tingle.min.js" %}"></script>
+    <script src="{% static "sic/js/static_info.js" %}"></script>
 {% endif %}
